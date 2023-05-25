@@ -16,6 +16,14 @@ class Colecao extends Controller
                           "laranja"
                         ];
     
+    public function criandoColecoes(){
+        //exemplo da criação de uma colção
+        $colecao1 = collect([1,2,3,4,5]);
+        $colecao2 = collect(["nome" => "Tiago", "nascimento" => 1984, "sexo" => 'M']);
+        $vetor1 = array(true,false,false,true,true);
+        $colecao3 = collect($vetor1);
+    }
+                        
     public function exibirCores(){
         $colectionCores = collect($this->listaCores);
         return view("cores.exibir-cores", ["colectionCores" => $colectionCores]);
